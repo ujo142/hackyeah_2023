@@ -1,0 +1,83 @@
+{
+  "$schema": "https://json.schemastore.org/eslintrc.json",
+  "root": true,
+  "extends": [
+    "next/core-web-vitals",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:tailwindcss/recommended"
+  ],
+  "plugins": ["@typescript-eslint", "unused-imports"],
+  "rules": {
+    "no-console": ["warn", { "allow": ["debug", "error"] }],
+    "no-unused-vars": "off",
+    "no-extra-boolean-cast": "warn",
+    "no-empty-pattern": "warn",
+    "no-useless-escape": "warn",
+    "no-use-before-define": [0],
+    "curly": "warn",
+    "eqeqeq": ["error", "always"],
+    "react/jsx-curly-brace-presence": "warn",
+    "react/jsx-key": [
+      "warn",
+      { "checkFragmentShorthand": true, "warnOnDuplicates": true }
+    ],
+    "unused-imports/no-unused-imports": "warn",
+    "react/jsx-no-target-blank": [
+      "warn",
+      { "enforceDynamicLinks": "always", "warnOnSpreadAttributes": true }
+    ],
+    "unused-imports/no-unused-vars": [
+      "warn",
+      {
+        "vars": "all",
+        "varsIgnorePattern": "^_",
+        "args": "after-used",
+        "argsIgnorePattern": "^_"
+      }
+    ],
+    "max-lines": ["warn", 300],
+    "max-len": [
+      "warn",
+      120,
+      {
+        "ignoreComments": true,
+        "ignorePattern": "^import .*",
+        "ignoreStrings": true
+      }
+    ],
+    "import/newline-after-import": ["warn", { "count": 1 }],
+    "import/order": [
+      "warn",
+      {
+        "groups": [["builtin", "external"], ["internal"], ["index", "sibling"]],
+        "newlines-between": "always",
+        "alphabetize": {
+          "order": "asc",
+          "caseInsensitive": true
+        }
+      }
+    ],
+    "@typescript-eslint/no-empty-function": "warn",
+    "@typescript-eslint/no-unused-vars": "off",
+    "@typescript-eslint/no-this-alias": "warn",
+    "@typescript-eslint/ban-ts-comment": "warn",
+    "@typescript-eslint/no-empty-interface": "off",
+    "@typescript-eslint/no-use-before-define": [1],
+    "@typescript-eslint/no-explicit-any": "warn",
+    "@typescript-eslint/no-var-requires": "warn",
+    "no-restricted-imports": [
+      "error",
+      {
+        "paths": [
+          {
+            "name": "lodash",
+            "message": "Import [module] from lodash/[module] instead"
+          }
+        ]
+      }
+    ]
+  },
+  "settings": {
+    "linkComponents": ["Hyperlink", { "name": "Link", "linkAttribute": "href" }]
+  }
+}
