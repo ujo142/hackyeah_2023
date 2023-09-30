@@ -1,3 +1,5 @@
+import { Booker } from "@/components/Booker";
+
 export default function BookerPage() {
-  return <h1>Booker</h1>;
+  return <Booker />;
 }
